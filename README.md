@@ -4,7 +4,7 @@ ORM(ish) library for Android to quickly and easily make the link between a new o
 
 Mains goals of Android Database: Complex Joins (AD:CJ) are to provide an easy way to join multiple tables with only one request to the database, transpose the datas from the database in [POJO](http://en.wikipedia.org/wiki/POJO), do all the classic [CRUD](http://en.wikipedia.org/wiki/CRUD) operations and handle a large amount of use-case, all the while being performant and easy to implement.
 
-** This is still a work in progress. More features are on their ways. **
+**This is still a work in progress. More features are on their ways.**
 
 ## Features
 * Retrieve datas from one or multiple tables in one request
@@ -42,6 +42,7 @@ Your table representation should implement:
 |----|-----|
 |id|The unique identifier for this company|
 |name|This company name|
+|adress|This company adress|
 
 ### The Object model
 
@@ -52,7 +53,7 @@ public class Employee{
 	public Company company;
 }
 ```
-*** Please note: ***
+***Please note:***
 
 * The company information is under the name company, and not company_id. We could also have retrieved the company_id as a int if it was needed
 
@@ -65,7 +66,7 @@ public class Company{
 }
 ```
 
-*** Please note: ***
+***Please note:***
 
 * The employees informations are stored in a List. This doesn't require more code as AD:CJ will automatically make the difference between list and object when parsing the datas from the database
 
